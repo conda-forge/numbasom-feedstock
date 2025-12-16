@@ -1,5 +1,5 @@
 {% set name = "numbasom" %}
-{% set version = "0.0.5" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c3e14bae64e56b3f38f415d31525bd5c7c91e56f8c23ca5bf6531ed3ea21d6eb
+  sha256: d424ca4907b54d46dab3e3aa3d438568d64a50e20a3539419602b43e00083ed5
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - hatchling
   run:
     - python >={{ python_min }}
     - numba
